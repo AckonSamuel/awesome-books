@@ -1,62 +1,53 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Awesome books
 
-> Description the project.
+> Adding, Removing& displaying book list.
 
+
+first project at mcroverse module 2 :
+
+ Displaying list of books
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML
+- JS
+- linters for testing
 
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
 
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
-
-### Setup
-
 ### Install
+ 
+ after cloning the repo run 
+ `npm install`
 
 ### Usage
-
+   run 
+   `python -m http.sever`
 ### Run tests
-
-### Deployment
-
-
+   `npx hint .` for html check. giving hints about what is needed to and to your html page
+   `npx eslint .` for JS check
+   `npx eslint . --fix` to fix JS issues if found
 
 ## Authors
 
-👤 **Author1**
+👤 **Saied Gaffer**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Saied2035](https://github.com/AckonSamuel)
+- Twitter: [@SaiedGaffer](https://twitter.com/AckonSamuel)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/samuel-ackon-882717190/)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/AckonSamuel/awesome-books/issues).
 
 ## Show your support
 
@@ -64,9 +55,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Microverse: [microverse community](https://github.com/microverseinc)
+- My partner: [Saied Gaffer](https://github.com/saied2035)
 
 ## 📝 License
 
