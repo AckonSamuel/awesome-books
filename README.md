@@ -13,7 +13,7 @@ first project at mcroverse module 2 :
 
 - HTML
 - JS
-- liners for testing
+- linters for testing
 
 
 
