@@ -6,8 +6,11 @@ class BookList {
 
   addBook(title = '', author = '') {
     const list = document.querySelector('.booklist');
+    list.style.padding = '0';
     const li = document.createElement('li');
     li.classList.add('show', 'delete');
+    li.style.margin = '0';
+    li.style.listStyleType = 'none';
     const bookTitle = document.createElement('p');
     bookTitle.className = 'title';
     bookTitle.innerText = title;
@@ -45,3 +48,13 @@ const bookAdd = () => {
 
 const addBtn = document.querySelector('.add');
 addBtn.addEventListener('click', bookAdd);
+
+const bookRemove = (e) => {
+  if (e.target.classList.contains('remove')) {
+    const getLi = document.querySelectorAll('li');
+    const index = Array.from(getLi).indexOf(e.target.parentNode);
+    listOfBooks.removeBook(index);
+    document.querySelectorAll('li')[index].remove();
+  }
+};
+document.addEventListener('click', bookRemove);
