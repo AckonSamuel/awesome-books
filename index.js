@@ -8,7 +8,6 @@ class BookList {
     const list = document.querySelector('.booklist');
     list.style.padding = '0';
     const li = document.createElement('li');
-    li.classList.add('show', 'delete');
     li.style.margin = '0';
     li.style.listStyleType = 'none';
     const bookTitle = document.createElement('p');
@@ -58,3 +57,9 @@ const bookRemove = (e) => {
   }
 };
 document.addEventListener('click', bookRemove);
+
+const showBookList = () => {
+  const books = JSON.parse(window.localStorage.bookList);
+  books.forEach((book) => listOfBooks.addBook(book.title, book.author));
+};
+window.addEventListener('load', showBookList);
