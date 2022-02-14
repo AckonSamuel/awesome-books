@@ -4,7 +4,7 @@ class BookList {
     this.bookList = [];
   }
 
-  add_book(title = '', author = '') {
+  addBook(title = '', author = '') {
     const list = document.querySelector('.booklist');
     const li = document.createElement('li');
     li.classList.add('show', 'delete');
@@ -26,16 +26,22 @@ class BookList {
     list.appendChild(li);
     const book = { title, author };
     this.bookList.push(book);
-    window.localStorage.setItem('bookList', this.bookList);
+    window.localStorage.setItem('bookList', JSON.stringify(this.bookList));
   }
 
-  remove_book(index) {
-
-      this.bookList = this.bookList.filter((book, i) => {
-
-              return this.bookList[index] !== this.bookList[i]
-        })
+  removeBook(index) {
+    this.bookList = this.bookList.filter((book, i) => this.bookList[index] !== this.bookList[i]);
+    window.localStorage.setItem('bookList', JSON.stringify(this.bookList));
   }
 }
 
 const listOfBooks = new BookList();
+
+const bookAdd = () => {
+  const title = document.querySelector('#book_title').value;
+  const author = document.querySelector('#book_author').value;
+  listOfBooks.addBook(title, author);
+};
+
+const addBtn = document.querySelector('.add');
+addBtn.addEventListener('click', bookAdd);
