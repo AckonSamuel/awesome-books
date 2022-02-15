@@ -19,12 +19,9 @@ class BookList {
     const removeBtn = document.createElement('button');
     removeBtn.className = 'remove';
     removeBtn.innerText = 'Remove';
-    const hr = document.createElement('hr');
-    hr.className = 'bottom-border';
     li.appendChild(bookTitle);
     li.appendChild(bookAuthor);
     li.appendChild(removeBtn);
-    li.appendChild(hr);
     list.appendChild(li);
     const book = { title, author };
     this.bookList.push(book);
@@ -37,27 +34,35 @@ class BookList {
   }
 }
 
-  const bookAdd = () => {
-    const title = document.querySelector('#book_title').value;
-    const author = document.querySelector('#book_author').value;
-    addBook(title, author);
-  };
+const listOfBooks = new BookList();
 
-  const addBtn = document.querySelector('.add');
-  addBtn.addEventListener('click', bookAdd);
 
-  const bookRemove = (e) => {
-    if (e.target.classList.contains('remove')) {
-      const getLi = document.querySelectorAll('li');
-      const index = Array.from(getLi).indexOf(e.target.parentNode);
-      removeBook(index);
-      document.querySelectorAll('li')[index].remove();
-    }
-  };
-  document.addEventListener('click', bookRemove);
+const bookAdd = () => {
+  const title = document.querySelector('#book_title').value;
+  const author = document.querySelector('#book_author').value;
+  listOfBooks.addBook(title, author);
+};
 
-  const showBookList = () => {
-    const books = JSON.parse(window.localStorage.bookList);
-    books.forEach((book) => addBook(book.title, book.author));
-  };
-  showBookList();
+const addBtn = document.querySelector('.add');
+addBtn.addEventListener('click', bookAdd);
+
+const bookRemove = (e) => {
+  if (e.target.classList.contains('remove')) {
+    const getLi = document.querySelectorAll('li');
+    const index = Array.from(getLi).indexOf(e.target.parentNode);
+    listOfBooks.removeBook(index);
+    document.querySelectorAll('li')[index].remove();
+  }
+};
+document.addEventListener('click', bookRemove);
+
+const showBookList = () => {
+  if(!localStorage.bookList){
+     return;
+  }
+  const books = JSON.parse(window.localStorage.bookList);
+  books.forEach((book) => listOfBooks.addBook(book.title, book.author));
+};
+
+showBookList();
+
