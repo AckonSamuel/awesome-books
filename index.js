@@ -16,12 +16,9 @@ const addBook = (title = '', author = '') => {
   const removeBtn = document.createElement('button');
   removeBtn.className = 'remove';
   removeBtn.innerText = 'Remove';
-  const hr = document.createElement('hr');
-  hr.className = 'bottom-border';
   li.appendChild(bookTitle);
   li.appendChild(bookAuthor);
   li.appendChild(removeBtn);
-  li.appendChild(hr);
   list.appendChild(li);
   const book = { title, author };
   bookList.push(book);
