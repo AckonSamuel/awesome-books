@@ -13,14 +13,17 @@ h1 {
   align-items: center;
   margin: auto;
 }
+
 form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
+
 .add {
   align-self: flex-end;
 }
+
 ul {
   display: flex;
   flex-direction: column;
@@ -29,13 +32,20 @@ ul {
   margin: auto;
 }
 
+hr {
+  margin-top: 20px;
+  width: 15%;
+  height: 2px;
+  background: black;
+}
+
 li {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   padding-left: 1em;
   padding-right: 1em;
-  border: 1px solid gray ;
+  border: 1px solid gray;
 }
 
 .remove {

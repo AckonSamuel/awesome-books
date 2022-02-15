@@ -6,12 +6,11 @@ class BookList {
 
   addBook(title = '', author = '') {
     const list = document.querySelector('.booklist');
-    const liIndex = list.children.length
     list.style.padding = '0';
     const li = document.createElement('li');
     li.style.margin = '0';
     li.style.listStyleType = 'none';
-        li.style.background = '#E7E9EB'
+    li.style.background = '#E7E9EB';
     const bookTitle = document.createElement('p');
     bookTitle.className = 'title';
     bookTitle.innerText = `"${title}" by`;
@@ -38,7 +37,6 @@ class BookList {
 
 const listOfBooks = new BookList();
 
-
 const bookAdd = () => {
   const title = document.querySelector('#book_title').value;
   const author = document.querySelector('#book_author').value;
@@ -59,12 +57,11 @@ const bookRemove = (e) => {
 document.addEventListener('click', bookRemove);
 
 const showBookList = () => {
-  if(!localStorage.bookList){
-     return;
+  if (!localStorage.bookList) {
+    return;
   }
   const books = JSON.parse(window.localStorage.bookList);
   books.forEach((book) => listOfBooks.addBook(book.title, book.author));
 };
 
 showBookList();
-
