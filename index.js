@@ -12,10 +12,10 @@ class BookList {
     li.style.listStyleType = 'none';
     const bookTitle = document.createElement('p');
     bookTitle.className = 'title';
-    bookTitle.innerText = title;
+    bookTitle.innerText = `${title} by` + ` `;
     const bookAuthor = document.createElement('p');
     bookAuthor.className = 'author';
-    bookAuthor.innerText = author;
+    bookAuthor.innerText = " " + author;
     const removeBtn = document.createElement('button');
     removeBtn.className = 'remove';
     removeBtn.innerText = 'Remove';

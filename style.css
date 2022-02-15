@@ -28,3 +28,20 @@ ul {
   width: 50%;
   margin: auto;
 }
+
+li {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.remove {
+  align-self: center;
+  margin-left: auto;
+}
+
+.title {
+  margin-right: 5px;
+}
