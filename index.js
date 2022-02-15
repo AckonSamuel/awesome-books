@@ -6,16 +6,18 @@ class BookList {
 
   addBook(title = '', author = '') {
     const list = document.querySelector('.booklist');
+    const liIndex = list.children.length
     list.style.padding = '0';
     const li = document.createElement('li');
     li.style.margin = '0';
     li.style.listStyleType = 'none';
+        li.style.background = '#E7E9EB'
     const bookTitle = document.createElement('p');
     bookTitle.className = 'title';
-    bookTitle.innerText = `${title} by` + ` `;
+    bookTitle.innerText = `"${title}" by`;
     const bookAuthor = document.createElement('p');
     bookAuthor.className = 'author';
-    bookAuthor.innerText = " " + author;
+    bookAuthor.innerText = author;
     const removeBtn = document.createElement('button');
     removeBtn.className = 'remove';
     removeBtn.innerText = 'Remove';
