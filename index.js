@@ -93,3 +93,6 @@ const displayContactSection = () => {
 
 const contactOption = document.querySelector('#contact');
 contactOption.addEventListener('click', displayContactSection);
+
+const date = document.querySelector('#date');
+date.innerText = new Date();
