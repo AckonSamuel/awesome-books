@@ -67,30 +67,29 @@ const showBookList = () => {
 
 showBookList();
 
-
 const displayListSection = () => {
-  if(!document.querySelector('.booklist').classList.contains('dn')){
-     return;
-  }
-  document.querySelector('.booklist').classList.remove('dn')
-  document.querySelector('.add_book').classList.toggle('dn')
-  document.querySelector('.contact').classList.toggle('dn')
-}
+  if (document.querySelector('.booklist').classList.contains('dn')) { document.querySelector('.booklist').classList.remove('dn'); }
+  if (!document.querySelector('.add_book').classList.contains('dn')) { document.querySelector('.add_book').classList.add('dn'); }
+  if (!document.querySelector('.contact').classList.contains('dn')) { document.querySelector('.contact').classList.add('dn'); }
+};
 
 const listOption = document.querySelector('#list');
-listOption.addEventListener('click',displayListSection)
-
+listOption.addEventListener('click', displayListSection);
 
 const displayInputSection = () => {
-  
-}
+  if (!document.querySelector('.booklist').classList.contains('dn')) { document.querySelector('.booklist').classList.add('dn'); }
+  if (document.querySelector('.add_book').classList.contains('dn')) { document.querySelector('.add_book').classList.remove('dn'); }
+  if (!document.querySelector('.contact').classList.contains('dn')) { document.querySelector('.contact').classList.add('dn'); }
+};
 
 const inputOption = document.querySelector('#add-new');
-inputOption.addEventListener('click',displayInputSection);
+inputOption.addEventListener('click', displayInputSection);
 
 const displayContactSection = () => {
-  
-}
+  if (!document.querySelector('.booklist').classList.contains('dn')) { document.querySelector('.booklist').classList.add('dn'); }
+  if (!document.querySelector('.add_book').classList.contains('dn')) { document.querySelector('.add_book').classList.add('dn'); }
+  if (document.querySelector('.contact').classList.contains('dn')) { document.querySelector('.contact').classList.remove('dn'); }
+};
 
 const contactOption = document.querySelector('#contact');
-contactOption.addEventListener('click',displayContactSection)
+contactOption.addEventListener('click', displayContactSection);
