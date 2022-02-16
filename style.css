@@ -84,6 +84,26 @@ hr {
   margin-right: 5px;
 }
 
+
+footer {
+  border: 2px solid black;
+  padding: 5px;
+  margin-bottom: 1.5em;
+  width: 90%;
+  margin: auto;
+  margin-top: 55vh;
+  padding: 5px 2.5%;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  align-items: center;
+  margin: auto;
+  margin-top: 20px;
+}
+
 .dn {
   display: none;
 }

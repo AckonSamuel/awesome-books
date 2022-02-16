@@ -8,7 +8,7 @@ class BookList {
     const list = document.querySelector('.booklist');
     list.style.padding = '0';
     const li = document.createElement('li');
-    li.className='book-item'
+    li.className = 'book-item';
     li.style.margin = '0';
     li.style.listStyleType = 'none';
     li.style.background = '#E7E9EB';
