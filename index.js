@@ -8,6 +8,7 @@ class BookList {
     const list = document.querySelector('.booklist');
     list.style.padding = '0';
     const li = document.createElement('li');
+    li.className='book-item'
     li.style.margin = '0';
     li.style.listStyleType = 'none';
     li.style.background = '#E7E9EB';
@@ -48,10 +49,10 @@ addBtn.addEventListener('click', bookAdd);
 
 const bookRemove = (e) => {
   if (e.target.classList.contains('remove')) {
-    const getLi = document.querySelectorAll('li');
+    const getLi = document.querySelectorAll('.book-item');
     const index = Array.from(getLi).indexOf(e.target.parentNode);
     listOfBooks.removeBook(index);
-    document.querySelectorAll('li')[index].remove();
+    document.querySelectorAll('.book-item')[index].remove();
   }
 };
 document.addEventListener('click', bookRemove);

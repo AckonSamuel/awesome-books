@@ -1,11 +1,38 @@
 body {
   margin: 0;
 }
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+  border: 2px solid black;
+  padding:  0 2.5%;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+nav {
+  margin-left: auto;
+}
+#nav-list {
+  list-style: none;
+  display: flex;
+}
+.nav-list-item {
+  cursor: pointer;
+}
+#nav-list > li:nth-child(2) {
+   border-left: 2px solid gray;
+   border-right: 2px solid gray;
+   padding: 0 8px;
+   margin: 0 10px;
+}
 
-h1 {
+h2 {
   text-align: center;
   margin-block-end: 0;
 }
+
 
 .add_book {
   display: flex;
@@ -24,7 +51,7 @@ form {
   align-self: flex-end;
 }
 
-ul {
+.booklist {
   display: flex;
   flex-direction: column;
   border: 2px solid black;
@@ -39,7 +66,7 @@ hr {
   background: black;
 }
 
-li {
+.book-item {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -55,4 +82,8 @@ li {
 
 .title {
   margin-right: 5px;
+}
+
+.dn {
+  display: none;
 }
