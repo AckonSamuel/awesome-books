@@ -66,3 +66,31 @@ const showBookList = () => {
 };
 
 showBookList();
+
+
+const displayListSection = () => {
+  if(!document.querySelector('.booklist').classList.contains('dn')){
+     return;
+  }
+  document.querySelector('.booklist').classList.remove('dn')
+  document.querySelector('.add_book').classList.toggle('dn')
+  document.querySelector('.contact').classList.toggle('dn')
+}
+
+const listOption = document.querySelector('#list');
+listOption.addEventListener('click',displayListSection)
+
+
+const displayInputSection = () => {
+  
+}
+
+const inputOption = document.querySelector('#add-new');
+inputOption.addEventListener('click',displayInputSection);
+
+const displayContactSection = () => {
+  
+}
+
+const contactOption = document.querySelector('#contact');
+contactOption.addEventListener('click',displayContactSection)
