@@ -8,6 +8,7 @@ class BookList {
     const list = document.querySelector('.booklist');
     list.style.padding = '0';
     const li = document.createElement('li');
+    li.className = 'book-item';
     li.style.margin = '0';
     li.style.listStyleType = 'none';
     li.style.background = '#E7E9EB';
@@ -48,10 +49,10 @@ addBtn.addEventListener('click', bookAdd);
 
 const bookRemove = (e) => {
   if (e.target.classList.contains('remove')) {
-    const getLi = document.querySelectorAll('li');
+    const getLi = document.querySelectorAll('.book-item');
     const index = Array.from(getLi).indexOf(e.target.parentNode);
     listOfBooks.removeBook(index);
-    document.querySelectorAll('li')[index].remove();
+    document.querySelectorAll('.book-item')[index].remove();
   }
 };
 document.addEventListener('click', bookRemove);
@@ -65,3 +66,33 @@ const showBookList = () => {
 };
 
 showBookList();
+
+const displayListSection = () => {
+  if (document.querySelector('.booklist').classList.contains('dn')) { document.querySelector('.booklist').classList.remove('dn'); }
+  if (!document.querySelector('.add_book').classList.contains('dn')) { document.querySelector('.add_book').classList.add('dn'); }
+  if (!document.querySelector('.contact').classList.contains('dn')) { document.querySelector('.contact').classList.add('dn'); }
+};
+
+const listOption = document.querySelector('#list');
+listOption.addEventListener('click', displayListSection);
+
+const displayInputSection = () => {
+  if (!document.querySelector('.booklist').classList.contains('dn')) { document.querySelector('.booklist').classList.add('dn'); }
+  if (document.querySelector('.add_book').classList.contains('dn')) { document.querySelector('.add_book').classList.remove('dn'); }
+  if (!document.querySelector('.contact').classList.contains('dn')) { document.querySelector('.contact').classList.add('dn'); }
+};
+
+const inputOption = document.querySelector('#add-new');
+inputOption.addEventListener('click', displayInputSection);
+
+const displayContactSection = () => {
+  if (!document.querySelector('.booklist').classList.contains('dn')) { document.querySelector('.booklist').classList.add('dn'); }
+  if (!document.querySelector('.add_book').classList.contains('dn')) { document.querySelector('.add_book').classList.add('dn'); }
+  if (document.querySelector('.contact').classList.contains('dn')) { document.querySelector('.contact').classList.remove('dn'); }
+};
+
+const contactOption = document.querySelector('#contact');
+contactOption.addEventListener('click', displayContactSection);
+
+const date = document.querySelector('#date');
+date.innerText = new Date();
