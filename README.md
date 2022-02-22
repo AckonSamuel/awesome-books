@@ -27,9 +27,6 @@ To get a local copy up and running follow these simple example steps.
  after cloning the repo run 
  `npm install`
 
-### Usage
-   run 
-   `python -m http.sever`
 ### Run tests
    `npx hint .` for html check. giving hints about what is needed to and to your html page
    `npx eslint .` for JS check
@@ -39,8 +36,8 @@ To get a local copy up and running follow these simple example steps.
 
 👤 **Saied Gaffer**
 
-- GitHub: [@Saied2035](https://github.com/AckonSamuel)
-- Twitter: [@SaiedGaffer](https://twitter.com/AckonSamuel)
+- GitHub: [@AckonSamuel](https://github.com/AckonSamuel)
+- Twitter: [@AckonSamuel2](https://twitter.com/AckonSamuel)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/samuel-ackon-882717190/)
 
 ## 🤝 Contributing
